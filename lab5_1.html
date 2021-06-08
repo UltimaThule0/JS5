@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Редин Максим ПИ320</title> 
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="jquery-ui.js"></script>
+  <script src="jquery.myPlugin.js"></script>
+	<style>
+		body {
+			background-color: #ffbebe;
+		}
+canvas { border: 3px solid black; 
+background-color: white;}
+
+  </style>
+</head>
+ <body>
+	<h1> 
+	 Лабораторная работа №5</h1>
+    <h3>"Змейка"</h3> 
+    <div>
+      <p>Количество очков: <span id="schet">0</span></p>
+      <div id="start" title='"Змейка"'>Управляйте Змейкой клавишами на клавиатуре и собирайте яблоки. На экране Вы увидете счет.
+   </div>
+    </div>
+    <canvas width="800" height="800" id="game"></canvas>
+      <script type="text/javascript">
+       $( "#start" ).dialog({width: 400, buttons:{
+        "Играть!": function() { $('#start').myPlugin('start');  $( "#start" ).dialog('close')}}});                 
+        </script>
+
+ </body>
+</html>
